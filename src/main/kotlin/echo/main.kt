@@ -15,6 +15,17 @@ fun main() {
                 println(message.chat.id)
                 bot.sendMessage(chatId = ChatId.fromId(message.chat.id), text = text)
             }
+            command("start") {
+
+                val result = bot.sendMessage(chatId = ChatId.fromId(message.chat.id), text = "El bot se ha iniciado")
+
+                result.fold({
+
+                }, {
+                    // do something with the error
+                })
+            }
         }
     }
+    bot.startPolling()
 }

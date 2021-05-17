@@ -1,15 +1,17 @@
 package polls
 
+import Apikey.miToken
 import com.github.kotlintelegrambot.bot
 import com.github.kotlintelegrambot.dispatch
 import com.github.kotlintelegrambot.dispatcher.command
 import com.github.kotlintelegrambot.dispatcher.pollAnswer
 import com.github.kotlintelegrambot.entities.ChatId
 import com.github.kotlintelegrambot.entities.polls.PollType.QUIZ
+import com.github.kotlintelegrambot.network.fold
 
 fun main() {
     bot {
-        token = "BOT_API_TOKEN"
+        token = miToken
         dispatch {
 
 //Devuelve un mensaje con la opcion que ha escogido
@@ -18,8 +20,19 @@ fun main() {
                 println("${pollAnswer.user.username} has selected the option ${pollAnswer.optionIds.lastOrNull()} in the poll ${pollAnswer.pollId}")
             }
 
+            command("start") {
+
+                val result = bot.sendMessage(chatId = ChatId.fromId(message.chat.id), text = "El bot se ha iniciado")
+
+                result.fold({
+
+                }, {
+
+                })
+            }
+
 //Comando que mostrara una encuesta con los equipos de futbol
-            command("quizPoll") {
+            command("poll") {
                 bot.sendPoll(
 //Recoge la id del usuario que ha votado
                     chatId = ChatId.fromId(message.chat.id),
@@ -38,25 +51,37 @@ fun main() {
                 )
             }
 
-            command("quizPoll") {
+//Comando que mostrara una encuesta con los mejores defensas
+            command("defensa") {
                 bot.sendPoll(
+//Recoge la id del usuario que ha votado
                     chatId = ChatId.fromId(message.chat.id),
+//Tipo de encuesta
                     type = QUIZ,
+//Pregunta
                     question = "Mejor defensa del mundo?",
+//Todas las opciones
                     options = listOf("Piqué", "Ramos", "Puyol"),
-                    correctOptionId = 3,
+//Cual es la opcion correcta
+                    correctOptionId = 2,
                     isAnonymous = false
                 )
             }
 
-            command("closedPoll") {
+//Comando que mostrara una encuesta con los mejores jugadores
+            command("closedpoll") {
                 bot.sendPoll(
+//Recoge la id del usuario que ha votado
                     chatId = ChatId.fromId(message.chat.id),
+//Tipo de encuesta
                     type = QUIZ,
+//Pregunta
                     question = "Cual es el mejor jugador del mundo",
-                    options = listOf("Neymar", "Messi", "CR7"),
-                    correctOptionId = 2,
-                    isClosed = true,
+//Todas las opciones
+                    options = listOf("Neymar", "Messi", "Ronaldo"),
+//Todas las opciones
+                    correctOptionId = 1,
+//Cual es la opcion correcta
                     explanation = "Porque tiene mas balones de oro"
                 )
             }

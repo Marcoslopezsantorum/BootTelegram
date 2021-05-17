@@ -25,7 +25,8 @@ import com.github.kotlintelegrambot.network.fold
 
 fun main() {
     /**
-     * author: Marcos López Santorum y David Mariño Alonso
+     * author: Marcos López Santorum
+     * David Mariño Alonso
      *
      */
     val bot = bot {

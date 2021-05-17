@@ -78,7 +78,7 @@ fun main() {
 //Pregunta
                     question = "Cual es el mejor jugador del mundo",
 //Todas las opciones
-                    options = listOf("Neymar", "Messi", "CR7"),
+                    options = listOf("Neymar", "Messi", "Ronaldo"),
 //Todas las opciones
                     correctOptionId = 1,
 //Cual es la opcion correcta

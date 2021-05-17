@@ -27,7 +27,7 @@ fun main() {
                 result.fold({
 
                 }, {
-                    // do something with the error
+
                 })
             }
 

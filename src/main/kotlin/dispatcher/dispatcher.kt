@@ -36,11 +36,12 @@ fun main() {
         logLevel = LogLevel.Network.Body
 
         dispatch {
-            //Este mensaje salta cuando contestas al bot con un stiker
+
+            //El mensaje aparece cuando le mandas al bot un sticker
             message(Filter.Sticker) {
                 bot.sendMessage(ChatId.fromId(message.chat.id), text = "You have received an awesome sticker \\o/")
             }
-            //Este mensaje salta cuando reenvias el mensaje del bot o por que lo respondes en el chat
+            //El mensaje salta cuando reenvías el mensaje del bot o por que lo respondes en el chat
             message(Filter.Reply or Filter.Forward){
 
                 bot.sendMessage(ChatId.fromId(message.chat.id), text = "someone is replying or forwarding messages ...")

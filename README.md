@@ -5,6 +5,29 @@
 ##Marcos López Santorum
 
 
+  
+  
+  
+  ![Ramas](Images/ramas.png)
+  
+  
+ 
+  ![Mejor equipo](Images/Mejorequipo.png)
+  
+  
+  
+  ![Marco Polo](Images/MarcoPolo.png)
+  
+  ![Mejor jugador](Images/Mejorjugador.png)
+  
+  
+  ![Balones de oro](Images/Balonesdeoro.png)
+  
+  
+  ![Comandos](Images/Comandos.png)
+
+
+
 ##David Mariño Alonso
 
 
@@ -55,3 +78,6 @@
     
 
     ###Webhook lo intentamos pero nos daba error al imporatar
+    
+    
+  

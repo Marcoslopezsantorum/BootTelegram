@@ -27,7 +27,6 @@ fun main() {
     /**
      * author: Marcos López Santorum
      * David Mariño Alonso
-     *
      */
     val bot = bot {
 

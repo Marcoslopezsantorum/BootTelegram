@@ -1,34 +1,34 @@
 # BootTelegram
 
-#Autores
+# Autores
 
-##Marcos López Santorum
+## Marcos López Santorum
 
-
+## David Mariño Alonso
   
   
   
-  ![Ramas](Images/ramas.png)
+  ![Ramas](Imagenes/ramas.png)
   
   
  
-  ![Mejor equipo](Images/Mejorequipo.png)
+  ![Mejor equipo](Imagenes/Mejorequipo.jpeg)
   
   
   
-  ![Marco Polo](Images/MarcoPolo.png)
+  ![Marco Polo](Imagenes/MarcoPolo.jpeg)
   
-  ![Mejor jugador](Images/Mejorjugador.png)
-  
-  
-  ![Balones de oro](Images/Balonesdeoro.png)
+  ![Mejor jugador](Imagenes/Mejorjugador.jpeg)
   
   
-  ![Comandos](Images/Comandos.png)
+  ![Balones de oro](Imagenes/Balonesdeoro.jpeg)
+  
+  
+  ![Comandos](Imagenes/Comandos.jpeg)
 
 
 
-##David Mariño Alonso
+
 
 
 
@@ -37,9 +37,9 @@
 
 
 
-##Dispatcher 
+## Dispatcher 
 
-###Echo es el primer comando que utilizamos para que se active el bot
+### Echo es el primer comando que utilizamos para que se active el bot
 
             command("start") {
 
@@ -52,12 +52,12 @@
                 })
             }
             
-###            
+            
 
 
 
 
-###Polls son los comandos que introducimos para que despues los haga el bot 
+### Polls son los comandos que introducimos para que despues los haga el bot 
 
 
             command("poll") {
@@ -77,7 +77,7 @@
     
     
 
-    ###Webhook lo intentamos pero nos daba error al imporatar
+    ### Webhook lo intentamos pero nos daba error al importar
     
     
   

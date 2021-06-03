@@ -32,8 +32,6 @@ fun main() {
     val bot = bot {
 
         token = Apikey.miToken //el token indica cual es nuentro bot y a que le estamos mandando nuetros comandos
-        timeout = 30
-        logLevel = LogLevel.Network.Body
 
         dispatch {
 
@@ -100,7 +98,7 @@ fun main() {
              * @param comandoconargs Nombre del comando de nuestro bot
              * Este comando te devuelve un texto
              */
-            command("commandWithArgs") {
+            command("commandwithargs") {
                 val joinedArgs = args.joinToString()/*Crea una cadena de todos los elementos separados usando un
                 separador y usando el prefijo y sufijo dados si se suministran. Si la colección puede ser enorme, puede
                 especificar un valor de límite no negativo, en cuyo caso solo se agregarán los primeros elementos de
@@ -130,7 +128,7 @@ fun main() {
             //Version mejorada del marckdown. Lo de la mencion del usuario aun no funciona ni en la libreria de kotlinTelegram
 
 
-            command("markdownV2") {
+            command("markdownv2") {
                 val markdownV2Text = """
                     *bold \*text*
                     _italic \*text_
@@ -166,7 +164,7 @@ fun main() {
              */
             //sirve para crear dos botones
 
-            command("inlineButtons") {
+            command("inlinebuttons") {
                 val inlineKeyboardMarkup = InlineKeyboardMarkup.create(
                 //text es el texto que aparece en el botón
                 // callbackData Retoena el callbackQuery asociado (linea de código)
@@ -190,7 +188,7 @@ fun main() {
             un grupo no funciona este comando
             */
 
-            command("userButtons") {
+            command("userbuttons") {
                 val keyboardMarkup = KeyboardReplyMarkup(keyboard = generateUsersButton(), resizeKeyboard = true)
                 bot.sendMessage(
                     chatId = ChatId.fromId(message.chat.id),
@@ -204,7 +202,7 @@ fun main() {
              */
             //Este comando sirve para poder enviar fotos con el bot
 
-            command("mediaGroup") {
+            command("mediagroup") {
                 bot.sendMediaGroup(
                     chatId = ChatId.fromId(message.chat.id),
                     mediaGroup = MediaGroup.from(
@@ -226,7 +224,7 @@ fun main() {
              */
             //este texto de entrada tiene que coincidir con el texto que se le ponga al boton EN callbackData
 
-            callbackQuery("Quéesestoo") {
+            callbackQuery("queesestoo") {
                 val chatId = callbackQuery.message?.chat?.id ?: return@callbackQuery
                 bot.sendMessage(ChatId.fromId(chatId), callbackQuery.data)
             }
@@ -300,7 +298,7 @@ fun main() {
              * @param dado nombre del comando
              * Retorna un dado/diana en formato emoji que saca una puntuacion
              */
-            command("diceAsDartboard") {
+            command("diceasdartboard") {
                 bot.sendDice(ChatId.fromId(message.chat.id), DiceEmoji.Dartboard)
             }
             //cuando reenvias la diana a el bot por privado te devuelve la puntiacion
